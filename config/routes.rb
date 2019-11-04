@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'purchases#index'
+  root 'welcome#index'
   resources :purchases
+  resources :stores
 end

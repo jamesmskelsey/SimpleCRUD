@@ -1,0 +1,7 @@
+<h2><%= @store.name %></h2>
+<p>Prices: <%= @store.prices %></p>
+<p>This is <%= @store.favorite ? "" : "not" %> a favorite store of yours!</p>
+
+<div>
+  <%= link_to  "Back to Stores", stores_path %>
+</div>
