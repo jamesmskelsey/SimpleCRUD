@@ -1,10 +1,18 @@
 class PurchasesController < ApplicationController
   def index
     @purchases = Purchase.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @purchases }
+    end
   end
 
   def show
     @purchase = Purchase.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @purchase }
+    end
   end
 
   def new
