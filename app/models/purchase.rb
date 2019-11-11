@@ -1,3 +1,5 @@
 class Purchase < ApplicationRecord
-  validates :name, :price, presence: true
+  belongs_to :store
+  
+  validates :name, :price, :store_id, presence: true
 end

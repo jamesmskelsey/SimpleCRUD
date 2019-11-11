@@ -1,0 +1,19 @@
+<%= form_with(model: @store, remote: true) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :prices %>
+    <%= f.number_field :prices, max: 5, min: 1 %>
+  </div>
+  <div>
+    <%= f.label :favorite %>
+    <%= f.check_box :favorite %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to  "Back", stores_path %>
