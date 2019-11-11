@@ -9,7 +9,6 @@ class PurchasesController < ApplicationController
 
   def new
     @purchase = Purchase.new
-    
   end
 
   def create
@@ -44,6 +43,6 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.require(:purchase).permit(:name, :price)
+    params.require(:purchase).permit(:name, :price, :store_id)
   end
 end

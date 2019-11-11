@@ -1,5 +1,5 @@
 <h2><%= @purchase.name %></h2>
-<p>This was bought on <%= @purchase.created_at %> for $<%= @purchase.price %>.
+<p>This was bought on <%= @purchase.created_at %> for $<%= @purchase.price %> at <%= link_to @purchase.store.name, store_path(@purchase.store) %>.
 
 
 <p>
